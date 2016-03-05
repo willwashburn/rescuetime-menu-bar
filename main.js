@@ -1,10 +1,24 @@
 "use strict";
 require('dotenv').config();
 
+var AutoLaunch = require('auto-launch')
 var menubar = require('menubar')
 var Rescuetime = require('rescuetime.js').create(process.env.RESCUETIME_API_KEY)
 var parse = require('parse-seconds')
 
+
+var appLauncher = new AutoLaunch({
+    name: 'RescueTimeMenuBar'
+});
+
+appLauncher.isEnabled(function (enabled) {
+    if (enabled) return;
+
+    appLauncher.enable(function (err) {
+
+    });
+
+});
 
 var mb = menubar(
     {
@@ -19,13 +33,12 @@ mb.on('ready', function ready() {
     // Calls the rescuetime API and updates the tray title
     updateTrayTitle();
 
-
     var interval = setInterval(function () {
 
-        // We do this every minute so it's up to date
+        // We do this every few minutes so it's up to date
         updateTrayTitle();
 
-    }, 60000);
+    }, 60 *2 * 1000);
 
     mb.tray.setHighlightMode(false);
 
@@ -34,7 +47,7 @@ mb.on('ready', function ready() {
 
 function updateTrayTitle() {
 
-    console.log('Updating tray title with rescuetime info');
+    console.log('Updating tray title with Rescuetime info');
 
     try {
         Rescuetime.totalProductiveTimeInSeconds()

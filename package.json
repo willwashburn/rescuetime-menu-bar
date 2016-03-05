@@ -4,6 +4,7 @@
   "description": "A menu bar with productive a days total productive hours from rescuetime.com",
   "dependencies": {
     "dotenv": "^2.0.0",
+    "auto-launch": "^1.1.1",
     "menubar": "^4.0.2",
     "moment": "^2.11.2",
     "parse-seconds": "^1.0.0",
