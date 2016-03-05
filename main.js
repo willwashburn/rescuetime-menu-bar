@@ -1,11 +1,13 @@
 "use strict";
-require('dotenv').config();
 
 var AutoLaunch = require('auto-launch')
 var menubar = require('menubar')
-var Rescuetime = require('rescuetime.js').create(process.env.RESCUETIME_API_KEY)
 var parse = require('parse-seconds')
 
+// The build process uses ./key, else get it from the env
+var RescueTimeKey = require('./key').key || process.env.RESCUETIME_API_KEY
+
+var Rescuetime = require('rescuetime.js').create(RescueTimeKey)
 
 var appLauncher = new AutoLaunch({
     name: 'RescueTimeMenuBar'

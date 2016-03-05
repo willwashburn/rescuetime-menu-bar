@@ -2,19 +2,13 @@
   "name": "rescuetime-menu-bar",
   "version": "0.0.1",
   "description": "A menu bar with productive a days total productive hours from rescuetime.com",
-  "dependencies": {
-    "dotenv": "^2.0.0",
-    "auto-launch": "^1.1.1",
-    "menubar": "^4.0.2",
-    "moment": "^2.11.2",
-    "parse-seconds": "^1.0.0",
-    "request": "^2.69.0",
-    "rescuetime.js": "0.0.2"
-  },
   "devDependencies": {
-    "dotenv-cli": "^1.0.0",
+    "auto-launch": "^1.1.1",
     "electron-packager": "^5.1.0",
-    "electron-prebuilt": "^0.36.0"
+    "electron-prebuilt": "^0.36.0",
+    "menubar": "^4.0.2",
+    "parse-seconds": "^1.0.0",
+    "rescuetime.js": "0.0.2"
   },
   "main": "main.js",
   "scripts": {
