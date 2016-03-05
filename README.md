@@ -1,5 +1,5 @@
-# RescueTime Menu Bar [![MIT](https://img.shields.io/badge/Hotness-Fire-brightgreen.svg?style=flat-squared)]()
-track total productive hours in your menu bar
+# RescueTime Menu Bar [![MIT](https://img.shields.io/badge/Hotness-Fire-orange.svg?style=flat-squared)]()
+> track total productive hours in your menu bar
 
 This adds the total hours and minutes that you've had of productivity today, according to [rescuetime](http://rescuetime.com?wish-I-had-an-affiliate-key). 
 
